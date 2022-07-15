@@ -32,10 +32,6 @@ public class WorkingWithStreams {
         return catList.stream()
                 .map(Cat::toDog)
                 .filter(dog -> !dog.getColor().equals("red"))
-                .peek(a -> {
-                    int mutatedCountLife = a.getCountLife() / 3;
-                    a.setCountLife(mutatedCountLife);
-                })
                 .toList();
     }
 }

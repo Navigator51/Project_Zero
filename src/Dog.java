@@ -2,12 +2,13 @@ public class Dog extends Animal {
 
     String color;
     String name = null;
-
+    int countLife  = 1;
     boolean isAngry = false;
 
-    Dog(String color, String name) {
-
+    Dog(String color, String name, int countLife) {
+        this.name = name;
         this.color = color;
+        this.countLife = countLife;
     }
 
     public Dog(boolean isAngry) {

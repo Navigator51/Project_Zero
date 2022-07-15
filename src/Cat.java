@@ -39,9 +39,13 @@ class Cat extends Animal {
     public String getName() {
         return name;
     }
+    @Override
+    public int getCountLife() {
+        return countLife;
+    }
 
     public static Dog toDog(Cat cat) {
-        Dog dog = new Dog(cat.getColor(), cat.getName());
+        Dog dog = new Dog(cat.getColor(), cat.getName(), (cat.getCountLife() / 3));
         return dog;
     }
 
