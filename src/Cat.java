@@ -1,10 +1,8 @@
 class Cat extends Animal {
 
-    String порода = null;
+    private String breed = null;
 
-    String color = "blue";
-    String name = null;
-    int countLife = 9;
+
 
     public Cat() {
     }
@@ -18,35 +16,22 @@ class Cat extends Animal {
         this.name = name;
     }
 
-    public Cat(String color, String name, String порода) {
+    public Cat(String color, String name, String breed) {
         this.color = color;
         this.name = name;
-        this.порода = порода;
+        this.breed = breed;
     }
 
-    public Cat(String name, String порода, int countLife) {
+    public Cat(String name, String breed, int countLife) {
         this.name = name;
-        this.порода = порода;
+        this.breed = breed;
         this.countLife = countLife;
     }
 
-    @Override
-    public String getColor() {
-        return color;
-    }
 
-    @Override
-    public String getName() {
-        return name;
-    }
-    @Override
-    public int getCountLife() {
-        return countLife;
-    }
 
     public static Dog toDog(Cat cat) {
-        Dog dog = new Dog(cat.getColor(), cat.getName(), (cat.getCountLife() / 3));
-        return dog;
+        return new Dog(cat.getColor(), cat.getName(), cat.getCountLife()/3);
     }
 
 }

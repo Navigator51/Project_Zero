@@ -1,8 +1,8 @@
 public class Animal {
 
-    String color = "green";
-    String name = "Bob";
-    static int countLife;
+    protected String color = "green";
+    protected String name = "Bob";
+    protected int countLife = 9;
 
     public  String getColor() {
         return color;
@@ -16,8 +16,4 @@ public class Animal {
         return countLife;
     }
 
-    public void setCountLife(int countLife) {
-
-        this.countLife = countLife;
-    }
 }

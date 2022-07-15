@@ -30,8 +30,8 @@ public class WorkingWithStreams {
 
     public static List<Dog> rechengeCats(List<Cat> catList) {
         return catList.stream()
-                .map(Cat::toDog)
                 .filter(dog -> !dog.getColor().equals("red"))
+                .map(Cat::toDog)
                 .toList();
     }
 }
