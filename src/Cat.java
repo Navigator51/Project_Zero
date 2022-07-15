@@ -1,5 +1,4 @@
-public class Cat extends Animal {
-
+class Cat extends Animal {
 
     String порода = null;
 
@@ -31,7 +30,15 @@ public class Cat extends Animal {
         this.countLife = countLife;
     }
 
+    @Override
+    public String getColor() {
+        return color;
+    }
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
     public static Dog toDog(Cat cat) {
         Dog dog = new Dog(cat.getColor(), cat.getName());
